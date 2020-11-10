@@ -1,1 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
+
+header {
+  background: #00ADB5;
+  text-align: center;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+footer {
+  background: #FF5722;
+}
+
+body {
+  background: #eeeeee;
+  color: #303841;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+#newAnimal , #signUp , #signIn , #sign-out {
+  text-align: center;
+}

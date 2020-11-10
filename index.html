@@ -1,17 +1,136 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>info-ark.io</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
-      <h1>Browser Template</h1>
+      <p id="response"></p>
+
+<header>
+      <h1><b>welcome to info ark.io</b></h1>
+      <p>Running an animal shelter is hard enough as it is.  From keeping the lights on to scooping poop, you've got a lot on your plate - that's where info ark.io comes in.  Easily input all the essential information on your new furry friend and leave the rest to us.
+</header>
+
+      <div id='allanimalsresults'>
+      </div>
+
+      <div id="intro">
+      <h1>FAQ</h1>
+      <h3>How does it work?</h3>
+      <p>Simply put, we're an animal first database.  You input the basics (name, breed, etc.) and we create the sleek user interface.</p>
+      <h3>Can I edit the information later?</h3>
+      <p>You bet! With info ark.io's easy to navigate layout, you're able to change each input with a few clicks of a button whenever you'd like.</p>
+      <h3>Why did you make this?</h3>
+      <p>Hi! I'm Katie Veneziano, the engineer and designer.  I'm the mom of two former shelter cats from New York City.  I've seen first hand the over-worked and under-appreciated efforts of multiple shelters and I wanted to try and make the process easier.  With info ark.io, high traffic metropolitian areas can easily input the essentials and leave the rest to us for organizing.</p>
+    </div>
+
+      <form id="newAnimal">
+      <fieldset>
+        <legend>ENTER A NEW FURRY FRIEND</legend>
+        <label for="new-animal-name">Name:</label>
+        <input id="new-animal-name" type="text" name="animal[name]" placeholder="Add their name here" /><br>
+
+        <label for="new-animal-type">Type:</label>
+        <input id="new-animal-type" type="text" name="animal[type]" placeholder="Cat? Dog? Godzilla?" /><br>
+
+        <label for="new-animal-breed">Breed:</label>
+        <input id="new-animal-breed" type="text" name="animal[breed]" placeholder="What's your best guess?" /><br>
+
+        <label for="new-animal-age">Age:</label>
+        <input id="new-animal-age" type="text" name="animal[age]" placeholder="What's your best guess?" /><br>
+
+        <label for="new-animal-health">Health:</label>
+        <input id="new-animal-health" type="text" name="animal[health]" placeholder="Anything going on?" /><br>
+
+            <input type="submit" value="Submit" />
+      </fieldset>
+      </form>
+
+
+
+
+
+      <form id='destroy-animal'>
+              <legend>DESTROY ANIMAL</legend>
+              <input type='submit' value='Destroy'>
+              </form>
+
+      <form id='index-animal'>
+              <legend>INDEX ANIMALS</legend>
+              <input type='submit' value='Index'>
+              </form>
+
+      <form id='update-animal'>
+        <fieldset>
+          <legend>UPDATE ANIMAL INFO (all inputs required)</legend>
+          <label for="update-animal-name">Name:</label>
+          <input id="update-animal-name" type="text" name="animal[name]" placeholder="Add their name here" /><br>
+
+          <label for="update-animal-type">Type:</label>
+          <input id="update-animal-type" type="text" name="animal[type]" placeholder="What's your best guess?" /><br>
+
+          <label for="update-animal-breed">Breed:</label>
+          <input id="update-animal-breed" type="text" name="animal[breed]" placeholder="What's your best guess?" /><br>
+
+          <label for="update-animal-age">Age:</label>
+          <input id="update-animal-age" type="text" name="animal[age]" placeholder="What's your best guess?" /><br>
+
+          <label for="update-animal-health">Health:</label>
+          <input id="update-animal-health" type="text" name="animal[health]" placeholder="Anything going on?" /><br>
+
+          <label for="input-animal-id">ID:</label>
+          <input id="input-animal-id" type="text" name="animal_id" placeholder="What is their system ID?" /><br>
+              <input type="submit" value="Submit" />
+        </fieldset>
+        </form>
+
+      <form id="signUp">
+      <fieldset>
+                <legend>NEW USER</legend>
+                <label for="sign-up-email">Email:</label>
+                <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Enter your email here" /><br>
+                <label for="sign-up-password">Password:</label>
+                <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password" /><br>
+                <label for="sign-up-password_confirmation">Password Confirmation:</label>
+                <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" /><br><br>
+                <input type="submit" value="Sign up!" />
+      </fieldset>
+      </form>
+
+        <form id="signIn">
+        <fieldset>
+                <legend>RETURNING USER</legend>
+                <label for="sign-in-email">Email:</label>
+                <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email"><br>
+                <label for="sign-in-password">Password:</label>
+                <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password"><br><br>
+                <input type="submit" value="Sign In!">
+        </fieldset>
+        </form>
+
+        <form id="changePassword">
+        <fieldset>
+                <legend>CHANGE PASSWORD</legend>
+                <input type="password" name="passwords[old]" placeholder="Old Password">
+                <input type="password" name="passwords[new]" placeholder="New Password">
+                <input type="submit" value="Change Password!">
+                  </fieldset>
+                </form>
+
+        <form id='sign-out'>
+                <legend>LOG OUT</legend>
+                <input type='submit' value='Sign out'>
+                </form>
+
     </body>
+    <footer>
+      <p>hello</p>
+    </footer>
 </html>
