@@ -16,8 +16,21 @@ body {
   background: #eeeeee;
   color: #303841;
   font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
 }
 
-#newAnimal , #signUp , #signIn , #sign-out {
+#intro , #allanimalsresults , #newAnimal , #signUp , #signIn , #sign-out , #index-animal , #destroy-animal , #changePassword , #update-animal {
   text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+#index-animal , #newAnimal , #destroy-animal , #update-animal {
+  margin: 7px;
+  padding: 7px;
+  border: 1px solid white;
+}
+
+#signUp , {
+margin-top: -8rem !important;
 }

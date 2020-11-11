@@ -17,11 +17,12 @@ const newAnimal = function (data) {
 
 const deleteAnimal = function (data) {
   return $.ajax({
+    url: config.apiUrl + '/animals/' + store.animal_id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/animals/' + data.animal_id,
-    method: 'DELETE'
+    method: 'DELETE',
+    data: data
   })
 }
 

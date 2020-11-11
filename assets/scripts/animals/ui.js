@@ -3,15 +3,20 @@
 const store = require('../store')
 
 const onNewAnimalSuccess = function (response) {
-  $('#response').text('Great job! We successfully added your new pal')
+  $('#allanimalsresults').text('Great job! We successfully added your new pal')
+  $('#intro').hide()
+  $('#response').hide()
 }
 
 const onNewAnimalFailure = function () {
-  $('#response').text('Meow! Well, that didnt work.  Try again')
+  $('#allanimalsresults').text('Meow! Well, that didnt work.  Try again')
+  $('#response').hide()
 }
 
 const onUpdateAnimalSuccess = function (response) {
   $('#response').text('Woof! No problem, ' + store.user.email)
+  $('#update-animal').trigger('reset')
+  $('#intro').hide()
 }
 
 const onUpdateAnimalFailure = function (error) {
@@ -19,7 +24,9 @@ const onUpdateAnimalFailure = function (error) {
 }
 
 const onDeleteAnimalSuccess = function (response) {
-  $('#response').text('This animal has been successfully deleted')
+  $('#allanimalsresults').text('This animal has been successfully deleted')
+  $('#intro').hide()
+  $('#response').hide()
 }
 
 const onDeleteAnimalFailure = function (error) {
@@ -27,16 +34,20 @@ const onDeleteAnimalFailure = function (error) {
 }
 
 const onIndexAnimalSuccess = function (res) {
+  $('#destroy-animal').show()
+  $('#intro').hide()
+  $('#response').hide()
   const animals = res.animal
-  console.log(animals)
-  $('#allanimalsresults').text('Here are all the animals you entered so far')
+  $('#allanimalsresults').text('Here are all the animals you entered so far:')
   animals.forEach(function (animals) {
     const animalsHTML = (`
-      <p>ID: ${animals._id}</p>
-      <p>name: ${animals.name}</p>
-      <p>breed: ${animals.breed}</p>
-      <p>age: ${animals.age}</p>
-      <p>health: ${animals.health}</p>
+      <p><b>ID:</b> ${animals._id}</p>
+      <p><b>Name:</b> ${animals.name}</p>
+      <p><b>Type:</b> ${animals.type}</p>
+      <p><b>Breed:</b> ${animals.breed}</p>
+      <p><b>Age:</b> ${animals.age}</p>
+      <p><b>Health:</b> ${animals.health}</p>
+      ***************************************
       `)
     $('#allanimalsresults').append(animalsHTML)
   })
@@ -44,6 +55,7 @@ const onIndexAnimalSuccess = function (res) {
 
 const onIndexAnimalFailure = function (error) {
   $('#allanimalsresults').text(error, 'Meow! Well, that didnt work.  Try again.')
+  $('#response').hide()
 }
 
 module.exports = {

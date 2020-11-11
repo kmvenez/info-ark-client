@@ -11,12 +11,15 @@
     </head>
 
     <body>
+
+      <div class="container-fluid">
       <p id="response"></p>
 
 <header>
       <h1><b>welcome to info ark.io</b></h1>
       <p>Running an animal shelter is hard enough as it is.  From keeping the lights on to scooping poop, you've got a lot on your plate - that's where info ark.io comes in.  Easily input all the essential information on your new furry friend and leave the rest to us.
 </header>
+
 
       <div id='allanimalsresults'>
       </div>
@@ -27,13 +30,15 @@
       <p>Simply put, we're an animal first database.  You input the basics (name, breed, etc.) and we create the sleek user interface.</p>
       <h3>Can I edit the information later?</h3>
       <p>You bet! With info ark.io's easy to navigate layout, you're able to change each input with a few clicks of a button whenever you'd like.</p>
-      <h3>Why did you make this?</h3>
-      <p>Hi! I'm Katie Veneziano, the engineer and designer.  I'm the mom of two former shelter cats from New York City.  I've seen first hand the over-worked and under-appreciated efforts of multiple shelters and I wanted to try and make the process easier.  With info ark.io, high traffic metropolitian areas can easily input the essentials and leave the rest to us for organizing.</p>
+      <h3>Do I have to input everything?</h3>
+      <p>Yes - please note that unless otherwise specified, all input information is required to keep track of Fido and Fluffy.</p>
     </div>
 
+    <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
       <form id="newAnimal">
       <fieldset>
-        <legend>ENTER A NEW FURRY FRIEND</legend>
+        <legend>Add-A-Pal</legend>
         <label for="new-animal-name">Name:</label>
         <input id="new-animal-name" type="text" name="animal[name]" placeholder="Add their name here" /><br>
 
@@ -51,36 +56,22 @@
 
             <input type="submit" value="Submit" />
       </fieldset>
-      </form>
-
-
-
-
-
-      <form id='destroy-animal'>
-              <legend>DESTROY ANIMAL</legend>
-              <input type='submit' value='Destroy'>
-              </form>
-
-      <form id='index-animal'>
-              <legend>INDEX ANIMALS</legend>
-              <input type='submit' value='Index'>
-              </form>
+    </form><br>
 
       <form id='update-animal'>
         <fieldset>
-          <legend>UPDATE ANIMAL INFO (all inputs required)</legend>
+          <legend>Update-A-Pal</legend>
           <label for="update-animal-name">Name:</label>
-          <input id="update-animal-name" type="text" name="animal[name]" placeholder="Add their name here" /><br>
+          <input id="update-animal-name" type="text" name="animal[name]" placeholder="Same or new name?" /><br>
 
           <label for="update-animal-type">Type:</label>
-          <input id="update-animal-type" type="text" name="animal[type]" placeholder="What's your best guess?" /><br>
+          <input id="update-animal-type" type="text" name="animal[type]" placeholder="Did this change!?" /><br>
 
           <label for="update-animal-breed">Breed:</label>
-          <input id="update-animal-breed" type="text" name="animal[breed]" placeholder="What's your best guess?" /><br>
+          <input id="update-animal-breed" type="text" name="animal[breed]" placeholder="What's your best guess now?" /><br>
 
           <label for="update-animal-age">Age:</label>
-          <input id="update-animal-age" type="text" name="animal[age]" placeholder="What's your best guess?" /><br>
+          <input id="update-animal-age" type="text" name="animal[age]" placeholder="What's your best guess now?" /><br>
 
           <label for="update-animal-health">Health:</label>
           <input id="update-animal-health" type="text" name="animal[health]" placeholder="Anything going on?" /><br>
@@ -89,7 +80,26 @@
           <input id="input-animal-id" type="text" name="animal_id" placeholder="What is their system ID?" /><br>
               <input type="submit" value="Submit" />
         </fieldset>
-        </form>
+      </form><br><br>
+
+      <form id='index-animal'>
+              <legend>See-A-Pal</legend>
+              <p>Display all animals currently registered under this profile.</p>
+              <input type='submit' value='Index'>
+            </form><br>
+
+        <form id='destroy-animal'>
+        <fieldset>
+                <legend>Delete-A-Pal</legend>
+                <p>Input the ID to remove an animal from your system.</p>
+                <label for="destroy-animal-id">ID:</label>
+                <input id="destroy-animal-id" type="text" name="animal_id" placeholder="What was their system ID?" /><br>
+                <input type='submit' value='Remove'>
+              </fieldset>
+                </form>
+                <br>
+              </div>
+              </div>
 
       <form id="signUp">
       <fieldset>
@@ -99,10 +109,10 @@
                 <label for="sign-up-password">Password:</label>
                 <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password" /><br>
                 <label for="sign-up-password_confirmation">Password Confirmation:</label>
-                <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" /><br><br>
+                <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" /><br>
                 <input type="submit" value="Sign up!" />
       </fieldset>
-      </form>
+    </form><br>
 
         <form id="signIn">
         <fieldset>
@@ -110,27 +120,27 @@
                 <label for="sign-in-email">Email:</label>
                 <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email"><br>
                 <label for="sign-in-password">Password:</label>
-                <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password"><br><br>
+                <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password"><br>
                 <input type="submit" value="Sign In!">
         </fieldset>
-        </form>
-
-        <form id="changePassword">
-        <fieldset>
-                <legend>CHANGE PASSWORD</legend>
-                <input type="password" name="passwords[old]" placeholder="Old Password">
-                <input type="password" name="passwords[new]" placeholder="New Password">
-                <input type="submit" value="Change Password!">
-                  </fieldset>
-                </form>
-
-        <form id='sign-out'>
-                <legend>LOG OUT</legend>
-                <input type='submit' value='Sign out'>
-                </form>
-
+      </form><br>
+        </div>
+</div>
     </body>
     <footer>
-      <p>hello</p>
+      <form id="changePassword">
+                <h1><b>Admin profile:</b></h1>
+      <fieldset>
+              <legend>Update Password</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password">
+              <input type="password" name="passwords[new]" placeholder="New Password">
+              <input type="submit" value="Change Password!">
+                </fieldset>
+              </form><br>
+      <form id='sign-out'>
+              <legend>Log Out</legend>
+              <input type='submit' value='Sign out'>
+            </form><br>
+      <p>info ark.io is a trademarked representation of the katiecodes brand.  for inquiries, please contact: kmvenez@gmail.com</p>
     </footer>
 </html>

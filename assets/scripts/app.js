@@ -35,4 +35,6 @@ $(() => {
   $('#index-animal').on('submit', onAnimalAction.onIndexAnimal)
 
   $('#update-animal').on('submit', onAnimalAction.onUpdateAnimal)
+
+  $('#destroy-animal').on('submit', onAnimalAction.onDeleteAnimal)
 })

@@ -22,11 +22,11 @@ const onSignInSuccess = function (response) {
   $('#newAnimal').show()
   $('#signIn').hide()
   $('#signUp').hide()
-  $('#destroy-animal').show()
   $('#index-animal').show()
-  $('#show-animal').show()
-  $('#update-animal').show()
   $('#sign-out').show()
+  $('#changePassword').show()
+  $('#update-animal').show()
+  $('#intro').show()
 }
 
 // This runs if sign up failed.
@@ -57,8 +57,18 @@ const onSignOutFailure = function (error) {
 
 // This runs if sign out was successful.
 const onSignOutSuccess = function (response) {
-  $('#sign-out').text('See you later ' + store.user.email)
+  $('#response').text('See you later ' + store.user.email)
   $('#sign-out').trigger('reset')
+  $('#newAnimal').hide()
+  $('#destroy-animal').hide()
+  $('#index-animal').hide()
+  $('#update-animal').hide()
+  $('#changePassword').hide()
+  $('#sign-out').hide()
+  $('#allanimalsresults').hide()
+  $('#signIn').show()
+  $('#signUp').show()
+  $('#intro').hide()
   store.user = null
 }
 
