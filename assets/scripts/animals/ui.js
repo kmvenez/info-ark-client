@@ -6,6 +6,7 @@ const onNewAnimalSuccess = function (response) {
   $('#allanimalsresults').text('Great job! We successfully added your new pal')
   $('#intro').hide()
   $('#response').hide()
+  $('#newAnimal').trigger('reset')
 }
 
 const onNewAnimalFailure = function () {

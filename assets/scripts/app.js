@@ -13,8 +13,6 @@ $(() => {
   $('#changePassword').hide()
   // On initial load, hide new animal form
   $('#newAnimal').hide()
-  // On initial load, hide intro section
-  $('#intro').hide()
   // On initial load, hide CRUD actions for ANIMALS
   $('#destroy-animal').hide()
   $('#index-animal').hide()

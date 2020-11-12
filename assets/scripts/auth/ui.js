@@ -26,7 +26,7 @@ const onSignInSuccess = function (response) {
   $('#sign-out').show()
   $('#changePassword').show()
   $('#update-animal').show()
-  $('#intro').show()
+  $('#intro').hide()
 }
 
 // This runs if sign up failed.
@@ -68,7 +68,7 @@ const onSignOutSuccess = function (response) {
   $('#allanimalsresults').hide()
   $('#signIn').show()
   $('#signUp').show()
-  $('#intro').hide()
+  $('#intro').show()
   store.user = null
 }
 
