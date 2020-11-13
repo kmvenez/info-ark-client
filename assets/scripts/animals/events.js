@@ -10,7 +10,6 @@ const onNewAnimal = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  console.log('it worked')
   api.newAnimal(data)
     .then(ui.onNewAnimalSuccess)
     .catch(ui.onNewAnimalFailure)
@@ -19,7 +18,6 @@ const onNewAnimal = function (event) {
 // This is the function to run when change password is clicked.
 const onUpdateAnimal = function (event) {
   event.preventDefault()
-  console.log(store)
   const form = event.target
   const data = getFormFields(form)
   api.updateAnimal(data)

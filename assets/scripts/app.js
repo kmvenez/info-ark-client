@@ -19,7 +19,6 @@ $(() => {
   $('#update-animal').hide()
   $('#sign-out').hide()
 
-  // On inital load, hide sign out
   $('#signUp').on('submit', onAction.onSignUp)
   // On submitting 'sign in', trigger function
   $('#signIn').on('submit', onAction.onSignIn)

@@ -12,6 +12,7 @@ const onNewAnimalSuccess = function (response) {
 const onNewAnimalFailure = function () {
   $('#allanimalsresults').text('Meow! Well, that didnt work.  Try again')
   $('#response').hide()
+  $('#newAnimal').trigger('reset')
 }
 
 const onUpdateAnimalSuccess = function (response) {
@@ -22,6 +23,7 @@ const onUpdateAnimalSuccess = function (response) {
 
 const onUpdateAnimalFailure = function (error) {
   $('#response').text(error, 'Meow! Well, that didn\'t work.  Try again.')
+  $('#update-animal').trigger('reset')
 }
 
 const onDeleteAnimalSuccess = function (response) {
@@ -38,6 +40,7 @@ const onIndexAnimalSuccess = function (res) {
   $('#destroy-animal').show()
   $('#intro').hide()
   $('#response').hide()
+  $('#index-animal').trigger('reset')
   const animals = res.animal
   $('#allanimalsresults').text('Here are all the animals you entered so far:')
   animals.forEach(function (animals) {
@@ -57,6 +60,7 @@ const onIndexAnimalSuccess = function (res) {
 const onIndexAnimalFailure = function (error) {
   $('#allanimalsresults').text(error, 'Meow! Well, that didnt work.  Try again.')
   $('#response').hide()
+  $('#index-animal').trigger('reset')
 }
 
 module.exports = {

@@ -4,20 +4,20 @@ const store = require('../store')
 
 // This runs when sign up was successful.
 const onSignUpSuccess = function (response) {
-  $('#response').text('Welcome, ' + response.user.email)
+  $('#intro').text('Welcome aboard the Ark, ' + response.user.email)
   $('#signUp').trigger('reset')
 }
 
 // This runs if sign up failed.
-const onSignUpFailure = function (error) {
-  $('#response').text(error, 'Uhoh! Try again.')
+const onSignUpFailure = function () {
+  $('#intro').text('Uhoh! Try again.')
   $('#signUp').trigger('reset')
 }
 
 // This runs if sign up was successful.
 const onSignInSuccess = function (response) {
   store.user = response.user
-  $('#response').text('Welcome, ' + response.user.email)
+  $('#allanimalsresults').text('Come on in the Ark, ' + response.user.email)
   $('#signIn').trigger('reset')
   $('#newAnimal').show()
   $('#signIn').hide()
@@ -31,22 +31,21 @@ const onSignInSuccess = function (response) {
 
 // This runs if sign up failed.
 const onSignInFailure = function () {
-  $('#signIn').text('Uhoh! Try again.')
+  $('#allanimalsresults').text('Uhoh! Try again.')
   $('#signIn').trigger('reset')
 }
 
 // This runs if change password was successful.
 const onChangePasswordSuccess = function () {
   $('#changePassword').show()
-  $('#changePassword').text('Success - password updated.')
+  $('#allanimalsresultspassword').text('Success - password updated.')
   $('#changePassword').trigger('reset')
 }
 
 // This runs if change password failed.
-const onChangePasswordFailure = function (error) {
-  $('#changePassword').text(error, 'Oh no, try again.')
+const onChangePasswordFailure = function () {
+  $('#allanimalsresultspassword').text('Uhoh! Try again')
   $('#changePassword').trigger('reset')
-  $('#changePassword').show()
 }
 
 // This runs if sign out failed.
@@ -56,8 +55,8 @@ const onSignOutFailure = function (error) {
 }
 
 // This runs if sign out was successful.
-const onSignOutSuccess = function (response) {
-  $('#response').text('See you later ' + store.user.email)
+const onSignOutSuccess = function () {
+  $('#intro').text('Woof woof, I mean, uh - see you soon!')
   $('#sign-out').trigger('reset')
   $('#newAnimal').hide()
   $('#destroy-animal').hide()

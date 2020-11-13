@@ -12,17 +12,13 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.onSignUpSuccess)
     .catch(ui.onSignUpFailure)
-  console.log('it worked')
 }
 
 // This is the function to run when sign in is clicked.
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('event', event)
   const form = event.target
-  console.log(form, 'form')
   const data = getFormFields(form)
-  console.log(data, 'data')
   api.signIn(data)
     .then(ui.onSignInSuccess)
     .catch(ui.onSignInFailure)
@@ -33,7 +29,6 @@ const onChangePassword = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  console.log(data, 'data')
   api.changePassword(data)
     .then(ui.onChangePasswordSuccess)
     .catch(ui.onChangePasswordFailure)
