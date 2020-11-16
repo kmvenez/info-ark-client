@@ -2,6 +2,7 @@
 
 const store = require('../store')
 
+// This runs if creating a new animal resource was successful.
 const onNewAnimalSuccess = function (response) {
   $('#allanimalsresults').text('Great job! We successfully added your new pal')
   $('#intro').hide()
@@ -9,33 +10,41 @@ const onNewAnimalSuccess = function (response) {
   $('#newAnimal').trigger('reset')
 }
 
+// This runs if creating a new animal resource failed.
 const onNewAnimalFailure = function () {
   $('#allanimalsresults').text('Meow! Well, that didnt work.  Try again')
   $('#response').hide()
   $('#newAnimal').trigger('reset')
 }
 
+// This runs if updating an animal resource was successful.
 const onUpdateAnimalSuccess = function (response) {
   $('#response').text('Woof! No problem, ' + store.user.email)
   $('#update-animal').trigger('reset')
   $('#intro').hide()
 }
 
+// This runs if updating an animal resource failed.
 const onUpdateAnimalFailure = function (error) {
   $('#response').text(error, 'Meow! Well, that didn\'t work.  Try again.')
   $('#update-animal').trigger('reset')
 }
 
+// This runs if deleting an animal resource was successful.
 const onDeleteAnimalSuccess = function (response) {
-  $('#allanimalsresults').text('This animal has been successfully deleted')
+  $('#allanimalsresults').text('This animal has been successfully deleted.')
   $('#intro').hide()
   $('#response').hide()
+  $('#destroy-animal').trigger('reset')
 }
 
-const onDeleteAnimalFailure = function (error) {
-  $('#response').text(error, 'Meow! Well, that didn\'t work.  Try again.')
+// This runs if deleting an animal resource failed.
+const onDeleteAnimalFailure = function () {
+  $('#allanimalsresults').text('Squeak! Well, that didn\'t work.  Try again.')
+  $('#destroy-animal').trigger('reset')
 }
 
+// This runs if indexing an animal resource was successful.
 const onIndexAnimalSuccess = function (res) {
   $('#destroy-animal').show()
   $('#intro').hide()
@@ -57,6 +66,7 @@ const onIndexAnimalSuccess = function (res) {
   })
 }
 
+// This runs if indexing an animal resource failed.
 const onIndexAnimalFailure = function (error) {
   $('#allanimalsresults').text(error, 'Meow! Well, that didnt work.  Try again.')
   $('#response').hide()

@@ -5,7 +5,7 @@ const api = require('./api')
 const ui = require('./ui')
 const store = require('./../store')
 
-// This is the function to run when sign up is clicked.
+// This is the function to run when add-a-pal is clicked.
 const onNewAnimal = function (event) {
   event.preventDefault()
   const form = event.target
@@ -15,7 +15,7 @@ const onNewAnimal = function (event) {
     .catch(ui.onNewAnimalFailure)
 }
 
-// This is the function to run when change password is clicked.
+// This is the function to run when update-a-pal is clicked.
 const onUpdateAnimal = function (event) {
   event.preventDefault()
   const form = event.target
@@ -25,14 +25,17 @@ const onUpdateAnimal = function (event) {
     .catch(ui.onUpdateAnimalFailure)
 }
 
-// This is the function to run when sign out is clicked.
+// This is the function to run when delete-a-pal is clicked.
 const onDeleteAnimal = function (event) {
   event.preventDefault()
-  api.deleteAnimal()
+  const form = event.target
+  const data = getFormFields(form)
+  api.deleteAnimal(data)
     .then(ui.onDeleteAnimalSuccess)
     .catch(ui.onDeleteAnimalFailure)
 }
 
+// This is the function to run when show-a-pal is clicked.
 const onIndexAnimal = function (event) {
   event.preventDefault()
   api.indexAnimal()

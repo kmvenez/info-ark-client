@@ -18,7 +18,7 @@ $(() => {
   $('#index-animal').hide()
   $('#update-animal').hide()
   $('#sign-out').hide()
-
+  // On submitting 'sign up', trigger function
   $('#signUp').on('submit', onAction.onSignUp)
   // On submitting 'sign in', trigger function
   $('#signIn').on('submit', onAction.onSignIn)
@@ -26,12 +26,12 @@ $(() => {
   $('#changePassword').on('submit', onAction.onChangePassword)
   // On submitting 'sign out', trigger function
   $('#sign-out').on('submit', onAction.onSignOut)
-  // On submitting 'start over', trigger function
+  // On submitting 'add-a-pal', trigger function
   $('#newAnimal').on('submit', onAnimalAction.onNewAnimal)
-  // On submitting 'show animals', trigger function
+  // On submitting 'index animals', trigger function
   $('#index-animal').on('submit', onAnimalAction.onIndexAnimal)
-
+  // On submitting 'update animals', trigger function
   $('#update-animal').on('submit', onAnimalAction.onUpdateAnimal)
-
+  // On submitting 'remove an animal', trigger function
   $('#destroy-animal').on('submit', onAnimalAction.onDeleteAnimal)
 })

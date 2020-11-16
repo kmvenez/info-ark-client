@@ -14,7 +14,7 @@ const onSignUpFailure = function () {
   $('#signUp').trigger('reset')
 }
 
-// This runs if sign up was successful.
+// This runs if sign in was successful.
 const onSignInSuccess = function (response) {
   store.user = response.user
   $('#allanimalsresults').text('Come on in the Ark, ' + response.user.email)
@@ -29,7 +29,7 @@ const onSignInSuccess = function (response) {
   $('#intro').hide()
 }
 
-// This runs if sign up failed.
+// This runs if sign in failed.
 const onSignInFailure = function () {
   $('#allanimalsresults').text('Uhoh! Try again.')
   $('#signIn').trigger('reset')
