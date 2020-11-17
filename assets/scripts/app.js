@@ -9,6 +9,7 @@ const onAction = require('./auth/events')
 const onAnimalAction = require('./animals/events')
 
 $(() => {
+  $('#allanimalsresults').hide()
   // On initial load, hide change password
   $('#changePassword').hide()
   // On initial load, hide new animal form

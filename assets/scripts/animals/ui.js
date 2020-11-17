@@ -53,14 +53,24 @@ const onIndexAnimalSuccess = function (res) {
   const animals = res.animal
   $('#allanimalsresults').text('Here are all the animals you entered so far:')
   animals.forEach(function (animals) {
-    const animalsHTML = (`
-      <p><b>ID:</b> ${animals._id}</p>
-      <p><b>Name:</b> ${animals.name}</p>
-      <p><b>Type:</b> ${animals.type}</p>
-      <p><b>Breed:</b> ${animals.breed}</p>
-      <p><b>Age:</b> ${animals.age}</p>
-      <p><b>Health:</b> ${animals.health}</p>
-      ***************************************
+    const animalsHTML = (`<br>
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+      </svg>
+
+      <table class="table table-bordered">
+  <thead>
+    <tr>
+      <p><b>Stats:</b> - </p>
+      <th scope="col"><p><b>Name:</b> ${animals.name}</p></th>
+      <th scope="col"><p><b>Type:</b> ${animals.type}</p></th>
+      <th scope="col"><p><b>Breed:</b> ${animals.breed}</p></th>
+      <th scope="col"><p><b>Age:</b> ${animals.age}</p></th>
+      <th scope="col"><p><b>Health:</b> ${animals.health}</p></th>
+      <th scope="col"><p><b>Unique ID:</b> ${animals._id}</p></th>
+      </tr>
+      </thead>
+</table>
       `)
     $('#allanimalsresults').append(animalsHTML)
   })

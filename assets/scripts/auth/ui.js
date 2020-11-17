@@ -17,6 +17,7 @@ const onSignUpFailure = function () {
 // This runs if sign in was successful.
 const onSignInSuccess = function (response) {
   store.user = response.user
+  $('#allanimalsresults').show()
   $('#allanimalsresults').text('Come on in the Ark, ' + response.user.email)
   $('#signIn').trigger('reset')
   $('#newAnimal').show()
@@ -26,7 +27,6 @@ const onSignInSuccess = function (response) {
   $('#sign-out').show()
   $('#changePassword').show()
   $('#update-animal').show()
-  $('#intro').hide()
 }
 
 // This runs if sign in failed.

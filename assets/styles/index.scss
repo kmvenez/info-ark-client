@@ -4,25 +4,39 @@
 
 header {
   background: #00ADB5;
-  text-align: center;
   font-family: 'Libre Franklin', sans-serif;
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:2px 0;
 }
 
 footer {
   background: #FF5722;
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:2px 0;
 }
 
 body {
   background: #eeeeee;
   color: #303841;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
+  padding: 10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:2px 0;
 }
 
-#intro , #allanimalsresults , #newAnimal , #signUp , #signIn , #sign-out , #index-animal , #destroy-animal , #changePassword , #update-animal {
-  text-align: center;
-  align-items: center;
-  align-content: center;
+#signUp , #signIn {
+  margin: 7px;
+  padding: 7px;
+  border: 1px solid white;
 }
 
 #index-animal , #newAnimal , #destroy-animal , #update-animal {
@@ -31,15 +45,40 @@ body {
   border: 1px solid white;
 }
 
-#signUp , {
-margin-top: -8rem !important;
-}
-
 #allanimalsresults {
-  font-size: 45px;
+  font-size: 20px;
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:2px 0;
 }
 
 #allanimalsresultspassword {
   font-size: 30px;
   text-align: center;
+}
+
+input[type="submit"] {
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:2px 0;
+}
+
+input[type="email"] {
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:5px 0;
+}
+
+input[type="password"] {
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:5px 0;
 }
