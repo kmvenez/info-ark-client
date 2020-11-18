@@ -18,13 +18,8 @@
       <h1><b>welcome to info ark.io</b></h1>
       <p>Running an animal shelter is hard enough as it is.  From keeping the lights on to scooping poop, you've got a lot on your plate - that's where info ark.io comes in.  Easily input all the essential information on your new furry friend and leave the rest to us.
 </header>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-diamond-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM5.495 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
-</svg> FAQ on info ark.io <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-diamond-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM5.495 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
-</svg>
+<br>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> FAQ on info ark.io
 </button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -56,11 +51,12 @@
     <div id='allanimalsresults'>
     </div>
 
-    <div class="container d-flex h-100">
-        <div class="row justify-content-center align-self-center">
+<div class="row">
+  <div class="col">
       <form id="newAnimal">
       <fieldset>
         <legend>Add-A-Pal</legend>
+        <p><i>Fill in all fields below to best keep track of your buddy.</i></p>
         <label for="new-animal-name">Name:</label>
         <input id="new-animal-name" type="text" name="animal[name]" placeholder="Add their name here" /><br>
         <label for="new-animal-type">Type:</label>
@@ -74,10 +70,13 @@
             <input type="submit" value="Submit" />
       </fieldset>
     </form>
+  </div>
 
+<div class="col">
       <form id='update-animal'>
         <fieldset>
           <legend>Update-A-Pal</legend>
+          <p><i>Hint: Click the 'index' button afterwards to see your updates.</i></p>
           <label for="update-animal-name">Name:</label>
           <input id="update-animal-name" type="text" name="animal[name]" placeholder="Same or new name?" /><br>
           <label for="update-animal-type">Type:</label>
@@ -93,15 +92,19 @@
               <input type="submit" value="Submit" />
         </fieldset>
       </form>
+    </div>
+  </div>
 
-
+<div class="row">
+<div class="col">
       <form id='index-animal'>
               <legend>See-A-Pal</legend>
-              <p>Display all animals currently registered under this profile.</p>
+              <p><i>Display all animals currently registered under this profile.  The button will generate a table at the top of the page.  If no results appear, no one is added!</p></i>
               <input type='submit' value='Index'>
             </form>
+          </div>
 
-
+<div class="col">
         <form id='destroy-animal'>
         <fieldset>
                 <legend>Delete-A-Pal</legend>
@@ -113,59 +116,59 @@
                 </form>
               </div>
               </div>
-
+            </div>
 
 <div class="row">
   <div class="col-6">
-  <form id="signUp">
-    <form class="dropdown-menu p-4">
+    <form id="signUp">
       <div class="form-group">
         <legend>Sign Up</legend>
-        <label for="sign-up-email">Email address:</label>
-        <input type="email" class="form-control" id="sign-up-email" name="credentials[email]" placeholder="email@example.com">
+        <label for="sign-up-email"></label>
+        <input type="email" class="form-control" id="sign-up-email" name="credentials[email]" placeholder="Email">
       </div>
       <div class="form-group">
-        <label for="sign-up-password">Password:</label>
+        <label for="sign-up-password"></label>
         <input type="password" class="form-control" id="sign-up-password" name="credentials[password]" placeholder="Password">
-        <label for="sign-up-password">Password Confirmation:</label>
-        <input type="password" class="form-control" id="sign-up-password" name="credentials[password_confirmation]" placeholder="Password">
+        <label for="sign-up-password"></label>
+        <input type="password" class="form-control" id="sign-up-password" name="credentials[password_confirmation]" placeholder="Confirm Password">
       </div>
       <button type="submit" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-closed" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"/>
-  <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
-</svg> Sign up</button>
-    </form>
-  </form>
-</div>
-</div>
+        <path fill-rule="evenodd" d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"/>
+        <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
+      </svg> Sign up</button><br><br>
+        </form>
+      </div>
 
 <div class="col-6">
-<form id="signIn">
-    <form class="dropdown-menu p-4">
+  <form id="signIn">
       <div class="form-group">
         <legend>Sign In</legend>
-        <label for="sign-in-email">Email address:</label>
-        <input type="email" class="form-control" id="sign-in-email" name="credentials[email]" placeholder="email@example.com">
+        <label for="sign-in-email"></label>
+        <input type="email" class="form-control" id="sign-in-email" name="credentials[email]" placeholder="Email">
       </div>
       <div class="form-group">
-        <label for="sign-in-password">Password:</label>
+        <label for="sign-in-password"></label>
         <input type="password" class="form-control" id="sign-in-password" name="credentials[password]" placeholder="Password">
       </div>
       <button type="submit" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
   <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
   <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
-</svg> Sign in</button>
-    </form>
-  </form>
+</svg> Sign in</button><br><br>
+</form>
 </div>
 </div>
+
 
 
 </body>
 
 
     <footer>
+
+<div class="row">
+<div class="col">
+
       <form id="changePassword">
                 <h1><b>ADMIN PROFILE</b></h1>
                 <div id='allanimalsresultspassword'></div>
@@ -179,13 +182,21 @@
               <input type="password" name="passwords[new]" placeholder="New Password">
               <input type="submit" value="Change Password!">
                 </fieldset>
-              </form><br>
+                </form>
+              </div>
+
+
+              <br>
+
+<div class="col">
       <form id='sign-out'>
               <legend>Log Out <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-closed-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
 </svg> </legend>
               <input type='submit' value='Sign out'>
             </form><br>
+          </div>
+        </div>
       <p>info ark.io is a trademarked representation of the katiecodes brand.  for inquiries, please contact: kmvenez@gmail.com</p>
     </footer>
 </html>

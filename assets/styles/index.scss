@@ -3,17 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
 
 header {
-  background: #00ADB5;
+  background: black;
+  color: white;
   font-family: 'Libre Franklin', sans-serif;
-  padding:10px;
-  border:0;
+  padding:15px;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius:10px;
   margin:2px 0;
 }
 
 footer {
-  background: #FF5722;
+  background: black;
+  color: white;
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -25,7 +26,7 @@ body {
   background: #eeeeee;
   color: #303841;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   padding: 10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -33,16 +34,35 @@ body {
   margin:2px 0;
 }
 
-#signUp , #signIn {
-  margin: 7px;
-  padding: 7px;
-  border: 1px solid white;
+#sign-up-email , #sign-up-password {
+  width: 625px;
+}
+
+#sign-in-email , #sign-in-password {
+  width: 625px;
+}
+
+#signUp {
+  margin: 3px;
+  padding: 10px;
+  float: left;
+}
+
+#signIn {
+  margin: 3px;
+  padding: 10px;
+  float: right;
+}
+
+#sign-out {
+  float: right;
 }
 
 #index-animal , #newAnimal , #destroy-animal , #update-animal {
   margin: 7px;
   padding: 7px;
   border: 1px solid white;
+  font-size: 15px;
 }
 
 #allanimalsresults {
