@@ -15,11 +15,13 @@
       <p id="response"></p>
 
 <header>
-      <h1><b>welcome to info ark.io</b></h1>
+  <input type="image" src="https://i.imgur.com/OHXYKBn.png" alt="Submit" width="180" height="180">
+
+      <h1><strong>welcome to info ark<span style="color:#c56c86">.</span>io</strong></h1>
       <p>Running an animal shelter is hard enough as it is.  From keeping the lights on to scooping poop, you've got a lot on your plate - that's where info ark.io comes in.  Easily input all the essential information on your new furry friend and leave the rest to us.
 </header>
 <br>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> FAQ on info ark.io
+<button type="button" class="btn btn-dark" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> FAQ on info ark.io
 </button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -48,6 +50,9 @@
   </div>
 </div>
 
+<div id="intro2">
+</div>
+
     <div id='allanimalsresults'>
     </div>
 
@@ -62,9 +67,9 @@
         <label for="new-animal-type">Type:</label>
         <input id="new-animal-type" type="text" name="animal[type]" placeholder="Cat? Dog? Godzilla?" /><br>
         <label for="new-animal-breed">Breed:</label>
-        <input id="new-animal-breed" type="text" name="animal[breed]" placeholder="What's your best guess?" /><br>
+        <input id="new-animal-breed" type="text" name="animal[breed]" placeholder="Best guess?" /><br>
         <label for="new-animal-age">Age:</label>
-        <input id="new-animal-age" type="text" name="animal[age]" placeholder="What's your best guess?" /><br>
+        <input id="new-animal-age" type="text" name="animal[age]" placeholder="Rough estimate?" /><br>
         <label for="new-animal-health">Health:</label>
         <input id="new-animal-health" type="text" name="animal[health]" placeholder="Anything going on?" /><br>
             <input type="submit" value="Submit" />
@@ -80,11 +85,11 @@
           <label for="update-animal-name">Name:</label>
           <input id="update-animal-name" type="text" name="animal[name]" placeholder="Same or new name?" /><br>
           <label for="update-animal-type">Type:</label>
-          <input id="update-animal-type" type="text" name="animal[type]" placeholder="Did this change!?" /><br>
+          <input id="update-animal-type" type="text" name="animal[type]" placeholder="Hope this didn't change!" disabled /><br>
           <label for="update-animal-breed">Breed:</label>
-          <input id="update-animal-breed" type="text" name="animal[breed]" placeholder="What's your best guess now?" /><br>
+          <input id="update-animal-breed" type="text" name="animal[breed]" placeholder="Best guess?" /><br>
           <label for="update-animal-age">Age:</label>
-          <input id="update-animal-age" type="text" name="animal[age]" placeholder="What's your best guess now?" /><br>
+          <input id="update-animal-age" type="text" name="animal[age]" placeholder="Rough estimate?" /><br>
           <label for="update-animal-health">Health:</label>
           <input id="update-animal-health" type="text" name="animal[health]" placeholder="Anything going on?" /><br>
           <label for="input-animal-id">ID:</label>
@@ -108,7 +113,7 @@
         <form id='destroy-animal'>
         <fieldset>
                 <legend>Delete-A-Pal</legend>
-                <p>Input the ID to remove an animal from your system.</p>
+                <p><i>Input the ID to remove an animal from your system.</p></i>
                 <label for="destroy-animal-id">ID:</label>
                 <input id="destroy-animal-id" type="text" name="animal[id]" placeholder="What was their system ID?" /><br>
                 <input type='submit' value='Remove'>
@@ -132,7 +137,7 @@
         <label for="sign-up-password"></label>
         <input type="password" class="form-control" id="sign-up-password" name="credentials[password_confirmation]" placeholder="Confirm Password">
       </div>
-      <button type="submit" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-closed" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <button type="submit" class="btn btn-dark" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-closed" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"/>
         <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
       </svg> Sign up</button><br><br>
@@ -150,7 +155,7 @@
         <label for="sign-in-password"></label>
         <input type="password" class="form-control" id="sign-in-password" name="credentials[password]" placeholder="Password">
       </div>
-      <button type="submit" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <button type="submit" class="btn btn-dark" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
   <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
   <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
@@ -171,6 +176,9 @@
 
       <form id="changePassword">
                 <h1><b>ADMIN PROFILE</b></h1>
+
+  <input type="image" src="https://i.imgur.com/pM7kFsc.png" alt="Submit" width="180" height="180">
+
                 <div id='allanimalsresultspassword'></div>
       <fieldset>
               <legend>Update Password <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-signpost-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -184,8 +192,6 @@
                 </fieldset>
                 </form>
               </div>
-
-
               <br>
 
 <div class="col">

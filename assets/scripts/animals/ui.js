@@ -4,7 +4,7 @@ const store = require('../store')
 
 // This runs if creating a new animal resource was successful.
 const onNewAnimalSuccess = function (response) {
-  $('#allanimalsresults').text('Great job! We successfully added your new pal')
+  $('#intro2').text('Great job! We successfully added your new pal.')
   $('#intro').hide()
   $('#response').hide()
   $('#newAnimal').trigger('reset')
@@ -12,27 +12,27 @@ const onNewAnimalSuccess = function (response) {
 
 // This runs if creating a new animal resource failed.
 const onNewAnimalFailure = function () {
-  $('#allanimalsresults').text('Meow! Well, that didnt work.  Try again')
+  $('#intro2').text('Meow! Well, that didn\'t work.  Try again.')
   $('#response').hide()
   $('#newAnimal').trigger('reset')
 }
 
 // This runs if updating an animal resource was successful.
 const onUpdateAnimalSuccess = function (response) {
-  $('#response').text('Woof! No problem, ' + store.user.email)
+  $('#intro2').text('Woof! No problem, ' + store.user.email + '.')
   $('#update-animal').trigger('reset')
   $('#intro').hide()
 }
 
 // This runs if updating an animal resource failed.
 const onUpdateAnimalFailure = function (error) {
-  $('#response').text(error, 'Meow! Well, that didn\'t work.  Try again.')
+  $('#intro2').text(error, 'Meow! Well, that didn\'t work.  Try again.')
   $('#update-animal').trigger('reset')
 }
 
 // This runs if deleting an animal resource was successful.
 const onDeleteAnimalSuccess = function (response) {
-  $('#allanimalsresults').text('This animal has been successfully deleted.')
+  $('#intro2').text('This animal has been successfully deleted.')
   $('#intro').hide()
   $('#response').hide()
   $('#destroy-animal').trigger('reset')
@@ -40,7 +40,7 @@ const onDeleteAnimalSuccess = function (response) {
 
 // This runs if deleting an animal resource failed.
 const onDeleteAnimalFailure = function () {
-  $('#allanimalsresults').text('Squeak! Well, that didn\'t work.  Try again.')
+  $('#intro2').text('Squeak! Well, that didn\'t work.  Try again.')
   $('#destroy-animal').trigger('reset')
 }
 
@@ -58,7 +58,7 @@ const onIndexAnimalSuccess = function (res) {
         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
       </svg>
 
-      <table class="table table-bordered">
+      <table class="table table-sm">
   <thead>
     <tr>
       <p><b>Stats:</b> - </p>
@@ -78,7 +78,7 @@ const onIndexAnimalSuccess = function (res) {
 
 // This runs if indexing an animal resource failed.
 const onIndexAnimalFailure = function (error) {
-  $('#allanimalsresults').text(error, 'Meow! Well, that didnt work.  Try again.')
+  $('#intro2').text(error, 'Meow! Well, that didnt work.  Try again.')
   $('#response').hide()
   $('#index-animal').trigger('reset')
 }

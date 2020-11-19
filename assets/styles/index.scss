@@ -3,8 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
 
 header {
-  background: black;
+  background: #355c7d ;
   color: white;
+  text-align: center;
   font-family: 'Libre Franklin', sans-serif;
   padding:15px;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -13,7 +14,7 @@ header {
 }
 
 footer {
-  background: black;
+  background: #725a7a;
   color: white;
   padding:10px;
   border:0;
@@ -23,8 +24,8 @@ footer {
 }
 
 body {
-  background: #eeeeee;
-  color: #303841;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(224,224,224,1) 100%);
+  color: #070d59;
   font-family: 'Libre Franklin', sans-serif;
   font-size: 12px;
   padding: 10px;
@@ -61,7 +62,7 @@ body {
 #index-animal , #newAnimal , #destroy-animal , #update-animal {
   margin: 7px;
   padding: 7px;
-  border: 1px solid white;
+  border: 1px inset #c56c86 ;
   font-size: 15px;
 }
 
@@ -72,9 +73,15 @@ body {
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius:10px;
   margin:2px 0;
+  text-align: center;
 }
 
 #allanimalsresultspassword {
+  font-size: 30px;
+  text-align: center;
+}
+
+#intro2 {
   font-size: 30px;
   text-align: center;
 }
@@ -97,6 +104,23 @@ input[type="email"] {
 
 input[type="password"] {
   padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:5px 0;
+}
+
+input[type="text"] {
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin:5px 0;
+}
+
+input[type="button"] {
+  padding:10px;
+  background-color: pink;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius:10px;
