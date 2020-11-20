@@ -17,16 +17,17 @@ const onSignUpFailure = function () {
 // This runs if sign in was successful.
 const onSignInSuccess = function (response) {
   store.user = response.user
-  $('#allanimalsresults').show()
-  $('#allanimalsresults').text('All aboard the Ark, ' + response.user.email + '!')
-  $('#signIn').trigger('reset')
-  $('#newAnimal').show()
   $('#signIn').hide()
   $('#signUp').hide()
+  $('#newAnimal').show()
   $('#index-animal').show()
   $('#sign-out').show()
   $('#changePassword').show()
   $('#update-animal').show()
+  $('#allanimalsresults').show()
+  $('#allanimalsresults').text('All aboard the Ark, ' + response.user.email + '!')
+  $('#intro2').text('')
+  $('#signIn').trigger('reset')
 }
 
 // This runs if sign in failed.
@@ -56,8 +57,6 @@ const onSignOutFailure = function (error) {
 
 // This runs if sign out was successful.
 const onSignOutSuccess = function () {
-  $('#intro2').text('Woof woof, I mean, uh - see you soon!')
-  $('#sign-out').trigger('reset')
   $('#newAnimal').hide()
   $('#destroy-animal').hide()
   $('#index-animal').hide()
@@ -68,6 +67,8 @@ const onSignOutSuccess = function () {
   $('#signIn').show()
   $('#signUp').show()
   $('#intro').show()
+  $('#intro2').text('Woof woof, I mean, uh - see you soon!')
+  $('#sign-out').trigger('reset')
   store.user = null
 }
 

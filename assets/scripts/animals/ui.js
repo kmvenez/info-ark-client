@@ -4,24 +4,25 @@ const store = require('../store')
 
 // This runs if creating a new animal resource was successful.
 const onNewAnimalSuccess = function (response) {
-  $('#intro2').text('Great job! We successfully added your new pal.')
   $('#intro').hide()
   $('#response').hide()
+  $('#intro2').text('Great job! We successfully added your new pal.')
+  $('#allanimalsresults').text('')
   $('#newAnimal').trigger('reset')
 }
 
 // This runs if creating a new animal resource failed.
 const onNewAnimalFailure = function () {
-  $('#intro2').text('Meow! Well, that didn\'t work.  Try again.')
   $('#response').hide()
+  $('#intro2').text('Meow! Well, that didn\'t work.  Try again.')
   $('#newAnimal').trigger('reset')
 }
 
 // This runs if updating an animal resource was successful.
 const onUpdateAnimalSuccess = function (response) {
+  $('#intro').hide()
   $('#intro2').text('Woof! No problem, ' + store.user.email + '.')
   $('#update-animal').trigger('reset')
-  $('#intro').hide()
 }
 
 // This runs if updating an animal resource failed.
@@ -32,9 +33,9 @@ const onUpdateAnimalFailure = function (error) {
 
 // This runs if deleting an animal resource was successful.
 const onDeleteAnimalSuccess = function (response) {
-  $('#intro2').text('This animal has been successfully deleted.')
   $('#intro').hide()
   $('#response').hide()
+  $('#intro2').text('This animal has been successfully deleted.')
   $('#destroy-animal').trigger('reset')
 }
 
@@ -46,12 +47,14 @@ const onDeleteAnimalFailure = function () {
 
 // This runs if indexing an animal resource was successful.
 const onIndexAnimalSuccess = function (res) {
-  $('#destroy-animal').show()
   $('#intro').hide()
+  $('#destroy-animal').show()
   $('#response').hide()
+  $('#intro2').text('')
   $('#index-animal').trigger('reset')
+
   const animals = res.animal
-  $('#allanimalsresults').text('Here are all the animals you entered so far:')
+  $('#allanimalsresults2').text('Here are all the animals you entered so far:')
   animals.forEach(function (animals) {
     const animalsHTML = (`<br>
       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +64,7 @@ const onIndexAnimalSuccess = function (res) {
       <table class="table table-sm">
   <thead>
     <tr>
-      <p><b>Stats:</b> - </p>
+      <p><b>Stats:</b> </p>
       <th scope="col"><p><b>Name:</b> ${animals.name}</p></th>
       <th scope="col"><p><b>Type:</b> ${animals.type}</p></th>
       <th scope="col"><p><b>Breed:</b> ${animals.breed}</p></th>
@@ -72,14 +75,14 @@ const onIndexAnimalSuccess = function (res) {
       </thead>
 </table>
       `)
-    $('#allanimalsresults').append(animalsHTML)
+    $('#allanimalsresults2').append(animalsHTML)
   })
 }
 
 // This runs if indexing an animal resource failed.
 const onIndexAnimalFailure = function (error) {
-  $('#intro2').text(error, 'Meow! Well, that didnt work.  Try again.')
   $('#response').hide()
+  $('#intro2').text(error, 'Meow! Well, that didnt work.  Try again.')
   $('#index-animal').trigger('reset')
 }
 
