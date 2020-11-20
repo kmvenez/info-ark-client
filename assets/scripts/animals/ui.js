@@ -4,25 +4,27 @@ const store = require('../store')
 
 // This runs if creating a new animal resource was successful.
 const onNewAnimalSuccess = function (response) {
+  $('#allanimalsresults').text('Great job! We successfully added your new pal')
+  $('#intro2').text('Great job! We successfully added your new pal.')
   $('#intro').hide()
   $('#response').hide()
-  $('#intro2').text('Great job! We successfully added your new pal.')
-  $('#allanimalsresults').text('')
   $('#newAnimal').trigger('reset')
+  $('#allanimalsresults').text('')
 }
 
 // This runs if creating a new animal resource failed.
 const onNewAnimalFailure = function () {
-  $('#response').hide()
   $('#intro2').text('Meow! Well, that didn\'t work.  Try again.')
+  $('#response').hide()
   $('#newAnimal').trigger('reset')
 }
 
 // This runs if updating an animal resource was successful.
 const onUpdateAnimalSuccess = function (response) {
+  $('#response').text('Woof! No problem, ' + store.user.email)
   $('#intro2').text('Woof! No problem, ' + store.user.email + '.')
-  $('#intro').hide()
   $('#update-animal').trigger('reset')
+  $('#intro').hide()
 }
 
 // This runs if updating an animal resource failed.
@@ -33,9 +35,9 @@ const onUpdateAnimalFailure = function (error) {
 
 // This runs if deleting an animal resource was successful.
 const onDeleteAnimalSuccess = function (response) {
+  $('#intro2').text('This animal has been successfully deleted.')
   $('#intro').hide()
   $('#response').hide()
-  $('#intro2').text('This animal has been successfully deleted.')
   $('#destroy-animal').trigger('reset')
 }
 
@@ -81,8 +83,8 @@ const onIndexAnimalSuccess = function (res) {
 
 // This runs if indexing an animal resource failed.
 const onIndexAnimalFailure = function (error) {
-  $('#response').hide()
   $('#intro2').text(error, 'Meow! Well, that didnt work.  Try again.')
+  $('#response').hide()
   $('#index-animal').trigger('reset')
 }
 
