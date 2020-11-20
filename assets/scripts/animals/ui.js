@@ -21,7 +21,6 @@ const onNewAnimalFailure = function () {
 
 // This runs if updating an animal resource was successful.
 const onUpdateAnimalSuccess = function (response) {
-  $('#response').text('Woof! No problem, ' + store.user.email)
   $('#intro2').text('Woof! No problem, ' + store.user.email + '.')
   $('#update-animal').trigger('reset')
   $('#intro').hide()
