@@ -3,7 +3,6 @@
 const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-const store = require('./../store')
 
 // This is the function to run when add-a-pal is clicked.
 const onNewAnimal = function (event) {
