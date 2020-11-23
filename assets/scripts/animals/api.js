@@ -17,7 +17,6 @@ const newAnimal = function (data) {
 
 // This is my API call for the remove an animal button.
 const deleteAnimal = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/animals/' + data.animal.id,
     headers: {
