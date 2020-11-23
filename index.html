@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>info-ark.io</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <div class="container-fluid">
+      <p id="response"></p>
+
+<header>
+  <input type="image" src="https://i.imgur.com/OHXYKBn.png" alt="Submit" width="180" height="180">
+
+      <h1><strong>welcome to info ark<span style="color:#c56c86">.</span>io</strong></h1>
+      <p>Running an animal shelter is hard enough as it is.  From keeping the lights on to scooping poop, you've got a lot on your plate - that's where info ark.io comes in.  Easily input all the essential information on your new furry friend and leave the rest to us.
+</header>
+<br>
+<button type="button" class="btn btn-dark" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> FAQ on info ark.io
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Frequently Asked Questions</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="intro">
+        <h3>How does it work?</h3>
+        <p>Simply put, we're an animal-first database.  You input the basics (name, breed, etc.) and we create the sleek user interface.</p>
+        <h3>Can I edit the information later?</h3>
+        <p>You bet! With info ark.io's easy to navigate layout, you're able to change each input with a few clicks of a button whenever you'd like.</p>
+        <h3>Do I have to input everything?</h3>
+        <p>Yes - please note that unless otherwise specified, all input information is required to keep track of Fido and Fluffy.</p><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="intro2">
+</div>
+
+  <h1 id='allanimalsresults'>
+  </h1>
+
+  <h1 id='allanimalsresults2'>
+  </h1>
+
+<div class="row">
+  <div class="col">
+      <form id="newAnimal">
+      <fieldset>
+        <legend>Add-A-Pal</legend>
+        <p><i>Fill in all fields below to best keep track of your buddy.</i></p>
+        <label for="new-animal-name">Name:</label>
+        <input id="new-animal-name" type="text" name="animal[name]" placeholder="Add their name here" /><br>
+        <label for="new-animal-type">Type:</label>
+        <input id="new-animal-type" type="text" name="animal[type]" placeholder="Cat? Dog? Godzilla?" /><br>
+        <label for="new-animal-breed">Breed:</label>
+        <input id="new-animal-breed" type="text" name="animal[breed]" placeholder="Best guess?" /><br>
+        <label for="new-animal-age">Age:</label>
+        <input id="new-animal-age" type="text" name="animal[age]" placeholder="Rough estimate?" /><br>
+        <label for="new-animal-health">Health:</label>
+        <input id="new-animal-health" type="text" name="animal[health]" placeholder="Anything going on?" /><br>
+            <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </div>
+
+<div class="col">
+      <form id='update-animal'>
+        <fieldset>
+          <legend>Update-A-Pal</legend>
+          <p><i>Hint: Click the 'index' button afterwards to see your updates.  Please note you cannot update an animal you did not input originally.</i></p>
+          <label for="update-animal-name">Name:</label>
+          <input id="update-animal-name" type="text" name="animal[name]" placeholder="Add their name here" /><br>
+          <label for="update-animal-type">Type:</label>
+          <input id="update-animal-type" type="text" name="animal[type]" placeholder="Hope this didn't change!" /><br>
+          <label for="update-animal-breed">Breed:</label>
+          <input id="update-animal-breed" type="text" name="animal[breed]" placeholder="Best guess?" /><br>
+          <label for="update-animal-age">Age:</label>
+          <input id="update-animal-age" type="text" name="animal[age]" placeholder="Rough estimate?" /><br>
+          <label for="update-animal-health">Health:</label>
+          <input id="update-animal-health" type="text" name="animal[health]" placeholder="Anything going on?" /><br>
+          <label for="input-animal-id">ID:</label>
+          <input id="input-animal-id" type="text" name="animal[id]" placeholder="What is their system ID?" /><br>
+              <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+<div class="row">
+<div class="col">
+      <form id='index-animal'>
+              <legend>See-A-Pal</legend>
+              <p><i>Display all animals currently registered under this profile.  The button will generate a table at the top of the page.  If no results appear, no one is added!</p></i>
+              <input type='submit' value='Index'>
+
+      </form>
+</div>
+
+<div class="col">
+        <form id='destroy-animal'>
+        <fieldset>
+                <legend>Delete-A-Pal</legend>
+                <p><i>Input the ID to remove an animal from your system.  Hint: click the 'index' button afterwards to see the updated list.</p></i>
+                <label for="destroy-animal-id">ID:</label>
+                <input id="destroy-animal-id" type="text" name="animal[id]" placeholder="What was their system ID?" /><br>
+                <input type='submit' value='Remove'>
+              </fieldset>
+                </form>
+</div>
+      </div>
+            </div>
+
+<div class="row">
+  <div class="col">
+    <form id="signUp">
+      <div class="form-group">
+        <legend>Sign Up</legend>
+        <label for="sign-up-email"></label>
+        <input type="email" class="form-control" id="sign-up-email" name="credentials[email]" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="sign-up-password"></label>
+        <input type="password" class="form-control" id="sign-up-password" name="credentials[password]" placeholder="Password">
+        <label for="sign-up-password"></label>
+        <input type="password" class="form-control" id="sign-up-password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      </div>
+      <button type="submit" class="btn btn-dark" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-closed" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"/>
+        <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
+      </svg> Sign up</button><br><br>
+        </form>
+  </div>
+
+<div class="col">
+  <form id="signIn">
+      <div class="form-group">
+        <legend>Sign In</legend>
+        <label for="sign-in-email"></label>
+        <input type="email" class="form-control" id="sign-in-email" name="credentials[email]" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="sign-in-password"></label>
+        <input type="password" class="form-control" id="sign-in-password" name="credentials[password]" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-dark" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
+  <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
+  <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
+</svg>Sign in</button><br><br>
+</form>
+</div>
+</div>
+
+<br><br>
+<footer>
+  <form id="changePassword">
+    <input type="image" src="https://i.imgur.com/pM7kFsc.png" alt="Submit" width="180" height="180" float="right">
+            <h1><b>ADMIN PROFILE</b></h1>
+            <div id='allanimalsresultspassword'></div>
+
+  <fieldset>
+          <legend>Update Password <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-signpost-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 1.414V2h2v-.586a1 1 0 0 0-2 0z"/>
+<path fill-rule="evenodd" d="M13.5 3H2v2h11.5l.75-1-.75-1zM2 2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h11.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H2zm.5 6H14v2H2.5l-.75-1 .75-1zM14 7a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2.5a1 1 0 0 1-.8-.4L.725 9.3a.5.5 0 0 1 0-.6L1.7 7.4a1 1 0 0 1 .8-.4H14z"/>
+<path d="M7 6h2v1H7V6zm0 5h2v5H7v-5z"/>
+</svg> </legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password!">
+            </fieldset>
+            </form>
+          <br>
+
+  <form id='sign-out'>
+          <legend>Log Out <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-closed-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg> </legend>
+          <input type='submit' value='Sign out'>
+        </form><br>
+  <p>info ark.io is a trademarked representation of the katiecodes brand.  for inquiries, please contact: kmvenez@gmail.com</p>
+</footer>
+
+</body>
+
+
+
+</html>
